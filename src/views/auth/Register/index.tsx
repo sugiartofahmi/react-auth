@@ -1,7 +1,7 @@
 import { FC, ReactElement } from "react";
 import MainLayout from "../../../layouts/MainLayout";
 import Button from "../../../components/Button";
-
+import { Link } from "react-router-dom";
 const Register: FC = (): ReactElement => {
   return (
     <MainLayout>
@@ -36,6 +36,14 @@ const Register: FC = (): ReactElement => {
             type="password"
             placeholder="Masukan Kata Sandi"
           />
+          <p className="text-gray-700 text-sm">
+            Sudah Punya Akun ?
+            <span className="text-blue-500">
+              <Link to="/" className="cursor-pointer ">
+                Login
+              </Link>
+            </span>
+          </p>
         </div>
         <div className="flex items-center justify-between">
           <Button
